@@ -12,7 +12,7 @@ To install **CSSParser** simply execute the following script in your Pharo image
 ```smalltalk
 Metacello new
    baseline: 'CSSParser';
-   repository: 'https://github.dev/pharo-contributions/CSSParser:master';
+   repository: 'github://pharo-contributions/CSSParser:master';
    load.
 ```
 
