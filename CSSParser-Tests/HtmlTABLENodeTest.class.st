@@ -9,12 +9,17 @@ Class {
 { #category : 'testing' }
 HtmlTABLENodeTest >> test01TableShouldRenderAsHtmlTableMorph [
 
+	self deprecated:'Removed Morph'. self skip.
+
 	self assert: HtmlTABLENode new getHtmlBlockMorph class equals: HtmlTableMorph
 ]
 
 { #category : 'testing' }
 HtmlTABLENodeTest >> test02TableElementsInColumnShouldHaveSameXPositions [
 | document table |
+
+	self deprecated:'Removed Morph'. self skip.
+
 	document := HtmlDocument new.
 	document parseContents: 
 		(ReadStream on: '<table>
@@ -30,6 +35,9 @@ HtmlTABLENodeTest >> test02TableElementsInColumnShouldHaveSameXPositions [
 { #category : 'testing' }
 HtmlTABLENodeTest >> test03TableElementsInRowsShouldHaveSameYPositions [
 | document table |
+
+	self deprecated:'Removed Morph'. self skip.
+
 	document := HtmlDocument new.
 	document parseContents: 
 		(ReadStream on: '<table>

@@ -29,6 +29,9 @@ HtmlDOMNodeTest >> setUp [
 { #category : 'testing' }
 HtmlDOMNodeTest >> test01FlushingInlineNodesShouldEmptyInputCollection [
 	| blockMorph inlineNodes |
+	
+	self deprecated:'Removed Morph'. self skip.
+	
 	blockMorph := HtmlBlockMorph new.
 	blockMorph node: self domNode.
 	inlineNodes := OrderedCollection newFrom: { HtmlDOMNode new. HtmlDOMNode new }.
@@ -40,6 +43,9 @@ HtmlDOMNodeTest >> test01FlushingInlineNodesShouldEmptyInputCollection [
 HtmlDOMNodeTest >> test02InlineNodesShouldBePlacedInHtmlInlineMorph [
 
 	| doc result |
+	
+	self deprecated:'Removed Morph'. self skip.
+	
 	doc := HtmlDocument new 
 		content: 'test';
 		children: {self domNode}.
@@ -54,6 +60,9 @@ HtmlDOMNodeTest >> test02InlineNodesShouldBePlacedInHtmlInlineMorph [
 HtmlDOMNodeTest >> test03SubsequentInlineNodesShouldGroupedIntoHtmlInlineMorph [
 
 	| doc result |
+	
+	self deprecated:'Removed Morph'. self skip.
+	
 	doc := HtmlDocument new 
 		content: 'testeins';
 		children: {self domNode}.
@@ -68,6 +77,9 @@ HtmlDOMNodeTest >> test03SubsequentInlineNodesShouldGroupedIntoHtmlInlineMorph [
 HtmlDOMNodeTest >> test04BlockNodeShouldBePlacedInHtmlBlockMorph [
 
 	| result |
+	
+	self deprecated:'Removed Morph'. self skip.
+	
 	self domNode children: { HtmlDIVNode new }.
 	result := self domNode getHtmlBlockMorph.
 	self assert: result submorphs size equals: 1.
@@ -78,6 +90,9 @@ HtmlDOMNodeTest >> test04BlockNodeShouldBePlacedInHtmlBlockMorph [
 HtmlDOMNodeTest >> test05MixedChildrenShouldBeGroupedIntoCorrectSubmorphs [
 
 	| doc result |
+	
+	self deprecated:'Removed Morph'. self skip.
+	
 	doc := HtmlDocument new 
 		content: 'testeinszweidrei';
 		children: {self domNode}.
@@ -104,6 +119,9 @@ HtmlDOMNodeTest >> test05MixedChildrenShouldBeGroupedIntoCorrectSubmorphs [
 HtmlDOMNodeTest >> test06InlineBlockElementsShouldBeTransformedIntoCorrectSubmorphs [
 
 	| doc result |
+	
+	self deprecated:'Removed Morph'. self skip.
+	
 	doc := HtmlDocument new 
 		content: 'testeinszwei';
 		children: {self domNode}.
@@ -169,6 +187,9 @@ HtmlDOMNodeTest >> test11BoxTypeShouldBeResolvedToCSSAttribute [
 HtmlDOMNodeTest >> test12InlineNodesShouldBeAssignedToHtmlInlineMorph [
 
 	| doc result inlineNodes |
+	
+	self deprecated:'Removed Morph'. self skip.
+	
 	doc := HtmlDocument new 
 		content: 'testeins';
 		children: {self domNode}.

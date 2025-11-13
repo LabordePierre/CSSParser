@@ -6,7 +6,8 @@ Class {
 		'parent',
 		'errors',
 		'start',
-		'end'
+		'end',
+		'tag'
 	],
 	#category : 'CSSParser-DOM',
 	#package : 'CSSParser',
@@ -349,7 +350,7 @@ HtmlParseNode >> suffixId [
 HtmlParseNode >> tag [
 	"Answer the value of tag"
 
-	^ tag isNil ifFalse: [tag asLowercase] ifTrue: [tag]
+	^ tag isNil ifFalse: [tag asLowercase] ifTrue: [tag]  
 ]
 
 { #category : 'accessing' }

@@ -4,7 +4,6 @@ Class {
 	#instVars : [
 		'attributes',
 		'hasTrailingSlash',
-		'tag',
 		'isImplied',
 		'dtd',
 		'endTagMissing',

@@ -15,7 +15,8 @@ Class {
 		'comments',
 		'elements',
 		'attLists',
-		'entities'
+		'entities',
+		'attributes'
 	],
 	#classVars : [
 		'Cache'
@@ -473,7 +474,7 @@ HtmlDTD >> readEntity: aStream [
 { #category : 'actions' }
 HtmlDTD >> reset [
 
-	entities := attributes := comments := elements := attLists := nil
+	entities := attributes := comments := elements := attLists := nil 
 ]
 
 { #category : 'private' }

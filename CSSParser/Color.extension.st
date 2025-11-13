@@ -48,9 +48,9 @@ Color class >> fromRGBFunction: aString [
 	|r g b splitString|
 	(aString beginsWith: 'rgb') ifTrue: 
 	[splitString := aString substrings: ','.
-	r := (splitString first trimBoth asInteger clampLow: 0 high: 255) / 255.
-	g := (splitString second trimBoth asInteger clampLow: 0 high: 255) / 255.
-	b := (splitString third trimBoth asInteger clampLow: 0 high: 255) / 255. 
+	r := (splitString first trimBoth asInteger clampBetween: 0 and: 255) / 255.
+	g := (splitString second trimBoth asInteger clampBetween: 0 and: 255) / 255.
+	b := (splitString third trimBoth asInteger clampBetween: 0 and: 255) / 255. 
 	^ Color r: r g: g b: b.].
 	^nil
 	
@@ -61,9 +61,9 @@ Color class >> fromRGBPercentageFunction: aString [
 	|r g b splitString|
 	('*%*' match:  aString) ifTrue: 
 	[splitString := aString substrings: ','.
-	r := (splitString first trimBoth asInteger clampLow: 0 high: 100) / 100.
-	g := (splitString second trimBoth asInteger clampLow: 0 high: 100) / 100.
-	b := (splitString third trimBoth asInteger clampLow: 0 high: 100) / 100.
+	r := (splitString first trimBoth asInteger clampBetween: 0 and: 100) / 100.
+	g := (splitString second trimBoth asInteger clampBetween: 0 and: 100) / 100.
+	b := (splitString third trimBoth asInteger clampBetween: 0 and: 100) / 100.
 	^ Color r: r g: g b: b.].
 	^nil
 	

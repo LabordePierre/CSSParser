@@ -29,5 +29,7 @@ HtmlANodeTest >> setUp [
 { #category : 'testing' }
 HtmlANodeTest >> test01AShouldRenderAsHtmlLinkMorphIfDisplayIsBlock [
 
+	self deprecated:'Removed Morph'. self skip.
+
 	self assert: self aNode getHtmlBlockMorph class equals: HtmlLinkMorph
 ]

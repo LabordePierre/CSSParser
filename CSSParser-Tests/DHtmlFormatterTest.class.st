@@ -23,7 +23,8 @@ DHtmlFormatterTest >> htmlFormatter: anObject [
 
 { #category : 'running' }
 DHtmlFormatterTest >> setUp [
-	self timeout: 300.
+
+	self timeLimit: 300 milliSecond.
 	self htmlFormatter: DHtmlFormatter new
 ]
 

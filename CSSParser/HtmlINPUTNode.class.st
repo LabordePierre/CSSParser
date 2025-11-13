@@ -29,7 +29,7 @@ HtmlINPUTNode >> addCheckBoxButtonToFormatter: formatter [
 	formData addInput: buttonInput.
 
 	"create the actual button"
-	button := UpdatingThreePhaseButtonMorph checkBox.
+	button := ThreePhaseButtonMorph checkBox.
 	button target: buttonInput;
 		getSelector: #pressed;
 		actionSelector: #toggle.
@@ -108,7 +108,7 @@ HtmlINPUTNode >> addRadioButtonToFormatter: formatter [
 		buttonSet  defaultButton: buttonInput ].
 
 	"create the actual button"
-	button := UpdatingThreePhaseButtonMorph radioButton.
+	button := ThreePhaseButtonMorph radioButton.
 	button target: buttonInput;
 		getSelector: #pressed;
 		actionSelector: #toggle.
@@ -149,7 +149,7 @@ HtmlINPUTNode >> addToFormatter: formatter [
 	self type = 'image'
 		ifTrue: [^self addImageButtonToFormatter: formatter].
 
-	(self type = 'text' or: [self type = 'password'] or: [self type = 'search'])
+	(self type = 'text' or: [[self type = 'password'] or: [self type = 'search']])
 		ifTrue: [^self addTextInputToFormatter: formatter].
 
 	self type = 'hidden' ifTrue: [
