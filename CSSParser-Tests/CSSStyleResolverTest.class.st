@@ -11,7 +11,7 @@ Class {
 
 { #category : 'running' }
 CSSStyleResolverTest >> setUp [
-	self setUp.
+	super setUp.
 	self styleResolver: CSSStyleResolver new
 ]
 

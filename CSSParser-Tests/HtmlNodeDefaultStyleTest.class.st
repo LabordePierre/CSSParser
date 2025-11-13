@@ -24,7 +24,7 @@ HtmlNodeDefaultStyleTest >> htmlFormatter: anObject [
 
 { #category : 'accessing' }
 HtmlNodeDefaultStyleTest >> setUp [
-	self timeout: 300.
+	self timeLimit: 300 milliSecond.
 	self htmlFormatter: DHtmlFormatter new.
 	self styleResolver: CSSStyleResolver new
 ]
