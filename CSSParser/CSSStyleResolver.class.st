@@ -91,13 +91,16 @@ CSSStyleResolver >> getStyle: attributeKey for: aDomNode [
 { #category : 'resolution' }
 CSSStyleResolver >> ifStyleNotNil: attributeKey do: aBlock [
 
-	(self getStyle: attributeKey) ifNotNilDo: [ :attribValue | ^aBlock value: attribValue ]
+	^ (self getStyle: attributeKey) ifNotNil: [ :attribValue |
+		aBlock value: attribValue ]
 ]
 
 { #category : 'resolution' }
 CSSStyleResolver >> ifStyleNotNil: attributeKey do: aBlock ifNil: anotherBlock [
 
-	(self getStyle: attributeKey) ifNil: [^anotherBlock value] ifNotNilDo: [ :attribValue | ^aBlock value: attribValue ]
+	^ (self getStyle: attributeKey)
+		  ifNil: [ anotherBlock value ]
+		  ifNotNil: [ :attribValue | aBlock value: attribValue ]
 ]
 
 { #category : 'private-resolution' }

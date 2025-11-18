@@ -20,7 +20,14 @@ Class {
 		'precedingSpaces',
 		'precedingNewlines',
 		'morphsToEmbed',
-		'incompleteMorphs'
+		'incompleteMorphs',
+		'boldLevel',
+		'italicsLevel',
+		'underlineLevel',
+		'strikeLevel',
+		'centerLevel',
+		'anchorLocations',
+		'imageMaps'
 	],
 	#classVars : [
 		'CSNonSeparators',
@@ -441,11 +448,11 @@ HtmlFormatter >> increaseUnderline [
 	self setAttributes.
 ]
 
-{ #category : 'private-initialization' }
+{ #category : 'initialization' }
 HtmlFormatter >> initialize [
 	outputStream := AttributedTextStream new.
 	preformattedLevel := 0.
-	indentLevel := boldLevel := italicsLevel := underlineLevel := strikeLevel := centerLevel := 0.
+	indentLevel := boldLevel := italicsLevel := underlineLevel := strikeLevel := centerLevel := 0. 
 	listLengths := OrderedCollection new.
 	listStyleTypes := OrderedCollection new.
 	listTypes := OrderedCollection new.

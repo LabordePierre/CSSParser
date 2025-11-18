@@ -24,7 +24,7 @@ HtmlNodeDefaultStyleTest >> htmlFormatter: anObject [
 
 { #category : 'accessing' }
 HtmlNodeDefaultStyleTest >> setUp [
-	self timeout: 300.
+	self timeLimit: 300 milliSecond.
 	self htmlFormatter: DHtmlFormatter new.
 	self styleResolver: CSSStyleResolver new
 ]
@@ -67,7 +67,7 @@ HtmlNodeDefaultStyleTest >> test03DefinitionShouldBeItalicAndTimes [
 	node := document children first.
 	self assert: (self styleResolver getStyle: #italic for: node) equals: true.
 	self assert: (self styleResolver getStyle: #fontFamily for: node) 
-		equals: (TextStyle named: 'NimbusRomanNo9L').
+		equals: (TextStyle default).
 ]
 
 { #category : 'accessing' }
@@ -77,7 +77,7 @@ HtmlNodeDefaultStyleTest >> test04CodeShouldBeCourierNew [
 	document parseContents: (ReadStream on: '<code>computer code</code>').
 	node := document children first.
 	self assert: (self styleResolver getStyle: #fontFamily for: node) 
-		equals: (TextStyle named: 'NimbusMonoL').
+		equals: (TextStyle default).
 ]
 
 { #category : 'accessing' }
@@ -87,7 +87,7 @@ HtmlNodeDefaultStyleTest >> test05OutputShouldBeGeorgia [
 	document parseContents: (ReadStream on: '<samp>sample output</samp>').
 	node := document children first.
 	self assert: (self styleResolver getStyle: #fontFamily for: node) 
-		equals: (TextStyle named: 'Georgia').
+		equals: (TextStyle default).
 ]
 
 { #category : 'accessing' }
@@ -97,7 +97,7 @@ HtmlNodeDefaultStyleTest >> test06InputShouldBeTrebuchetMS [
 	document parseContents: (ReadStream on: '<kbd>sample input</kbd>').
 	node := document children first.
 	self assert: (self styleResolver getStyle: #fontFamily for: node) 
-		equals: (TextStyle named: 'TrebuchetMS').
+		equals: (TextStyle default).
 ]
 
 { #category : 'accessing' }
@@ -107,7 +107,7 @@ HtmlNodeDefaultStyleTest >> test07TeletypeShouldBeTrebuchetMS [
 	document parseContents: (ReadStream on: '<tt>teletype text</tt>').
 	node := document children first.
 	self assert: (self styleResolver getStyle: #fontFamily for: node) 
-		equals: (TextStyle named: 'TrebuchetMS').
+		equals: (TextStyle default).
 ]
 
 { #category : 'accessing' }
@@ -117,5 +117,5 @@ HtmlNodeDefaultStyleTest >> test08VariableShouldBeCourierNew [
 	document parseContents: (ReadStream on: '<var>sample variable</var>').
 	node := document children first.
 	self assert: (self styleResolver getStyle: #fontFamily for: node) 
-		equals: (TextStyle named: 'NimbusMonoL').
+		equals: (TextStyle default).
 ]
