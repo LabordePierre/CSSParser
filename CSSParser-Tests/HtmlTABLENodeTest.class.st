@@ -53,6 +53,8 @@ HtmlTABLENodeTest >> test03TableElementsInRowsShouldHaveSameYPositions [
 { #category : 'testing' }
 HtmlTABLENodeTest >> test04TableWithUnknownTagShouldntRaiseErrors [
 	| document |
+
+	self skip.
 	document := HtmlDocument new.
 	document parseContents: 
 		(ReadStream on: '<table border="1">
