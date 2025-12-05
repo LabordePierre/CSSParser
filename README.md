@@ -9,7 +9,7 @@ To install a version of CSSParser, use one the following scripts inside a playgr
 ```st
 Metacello new
 	baseline: 'CSSParser';
-	repository: 'github://pharo-contributions/CSSParser:master';
+	repository: 'github://pharo-contributions/CSSParser';
 	onConflictUseLoaded;
 	load
 ```
@@ -17,7 +17,7 @@ Metacello new
 ### Add in your baseline
 
 ```st
-spec baseline: 'CSSParser' with: [ spec repository: 'github://pharo-contributions/CSSParser:master' ].
+spec baseline: 'CSSParser' with: [ spec repository: 'github://pharo-contributions/CSSParser' ].
 ```
 
 ## CSSParser model
@@ -31,7 +31,7 @@ To install **CSSParser** simply execute the following script in your Pharo image
 ```smalltalk
 Metacello new
    baseline: 'CSSParser';
-   repository: 'github://pharo-contributions/CSSParser:master';
+   repository: 'github://pharo-contributions/CSSParser';
    load.
 ```
 
