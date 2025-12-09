@@ -1,6 +1,6 @@
 Class {
 	#name : 'CSSError',
-	#superclass : 'HtmlError',
+	#superclass : 'AnObsoleteHtmlError',
 	#category : 'CSSParser-CSS-Errors',
 	#package : 'CSSParser',
 	#tag : 'CSS-Errors'

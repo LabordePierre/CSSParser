@@ -3,7 +3,7 @@ I am a base class for CSS parse nodes.
 "
 Class {
 	#name : 'CSSElement',
-	#superclass : 'HtmlParseNode',
+	#superclass : 'AnObsoleteHtmlParseNode',
 	#category : 'CSSParser-CSS',
 	#package : 'CSSParser',
 	#tag : 'CSS'
