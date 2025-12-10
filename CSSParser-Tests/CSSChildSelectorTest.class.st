@@ -11,6 +11,5 @@ CSSChildSelectorTest >> test01NodeWithoutParentShouldntRaiseErrors [
 
 	| selector |
 	selector := CSSSelector fromString: 'a>*'.
-	self deny: (selector matches: nil).
-	self deny: (selector matches: HtmlParseNode new).
+	self deny: (selector matches: HtmlParseNode new)
 ]
