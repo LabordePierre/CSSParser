@@ -1,5 +1,7 @@
 # CSSParser
 
+A CSS parser for [Pharo](https://pharo.org), providing a model and tools to read, interpret, and manipulate CSS stylesheets.
+
 ## How to get CSSParser
 
 To install a version of CSSParser, use one the following scripts inside a playground or in your project baseline.
@@ -9,7 +11,7 @@ To install a version of CSSParser, use one the following scripts inside a playgr
 ```st
 Metacello new
 	baseline: 'CSSParser';
-	repository: 'github://pharo-contributions/CSSParser';
+	repository: 'github://pharo-contributions/CSSParser:main';
 	onConflictUseLoaded;
 	load
 ```
@@ -17,23 +19,15 @@ Metacello new
 ### Add in your baseline
 
 ```st
-spec baseline: 'CSSParser' with: [ spec repository: 'github://pharo-contributions/CSSParser' ].
+spec baseline: 'CSSParser' with: [ spec repository: 'github://pharo-contributions/CSSParser:main' ].
 ```
 
-## CSSParser model
+## Model
+
+CSSParser provides an object model for CSS syntax and structure.
 
 ![image](https://user-images.githubusercontent.com/49183340/215075087-031fceec-913d-4de9-b13f-f9c4c32d2aa7.png)
 
-## Getting Started
-
-To install **CSSParser** simply execute the following script in your Pharo image:
-
-```smalltalk
-Metacello new
-   baseline: 'CSSParser';
-   repository: 'github://pharo-contributions/CSSParser';
-   load.
-```
-
 ## Origin project
-http://www.squeaksource.com/htmlcssparser/
+
+Originally inspired by the [HTML/CSS Parser for Squeak](http://www.squeaksource.com/htmlcssparser/).
